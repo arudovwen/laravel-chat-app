@@ -15,7 +15,6 @@ export default function Chat() {
   const [password, setPassword] = useState("");
   const [isAuth, setIsAuth] = useState(false);
   const [userData, setUserData] = useState(null)
-  
   let pusher = useRef(null);
   let channel = useRef(null)
 
