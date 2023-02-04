@@ -47,7 +47,7 @@ export default function Chat() {
     if(!userData) return;
     axios
       .get(
-        "http://localhost:8000/api/v1/get/message/users/list",
+        "https://firstroom-smoky.vercel.app/api/v1/get/message/users/list",
 
         {
           headers: {
@@ -69,7 +69,7 @@ export default function Chat() {
     setLoading(true);
     axios
       .post(
-        "http://localhost:8000/api/v1/get/message/history",
+        "https://firstroom-smoky.vercel.app/api/v1/get/message/history",
         { receiver_id: id },
         {
           headers: {
@@ -88,7 +88,7 @@ export default function Chat() {
    
     axios
       .post(
-        "http://localhost:8000/api/v1/messages",
+        "https://firstroom-smoky.vercel.app/api/v1/messages",
         {
           receiver_id: otherId,
           message: message,
@@ -105,7 +105,7 @@ export default function Chat() {
   }
 function handleSubmit(e){
   e.preventDefault()
-  axios.post("http://localhost:8000/api/v1/login", { email, password })
+  axios.post("https://firstroom-smoky.vercel.app/api/v1/login", { email, password })
   .then((res) => {
  
     setUserData(res.data)
